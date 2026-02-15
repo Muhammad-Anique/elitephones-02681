@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * theme.js - Handles visual state and PTA toggling
+ * theme.js - Handles visual state, PTA toggling, and image swapping
  */
 
 const UI_STATE = {
@@ -24,10 +24,12 @@ function formatPrice(amount) {
  */
 function updateAllPrices() {
     const ptaToggle = document.getElementById('pta-toggle');
+    if (!ptaToggle) return;
+
     UI_STATE.isPTA = ptaToggle.checked;
     localStorage.setItem('isPTA', UI_STATE.isPTA);
 
-    // Update toggles visual state if needed
+    // Update toggles visual state labels
     const ptaLabels = document.querySelectorAll('.pta-toggle-label');
     ptaLabels.forEach(label => {
         if (label.dataset.active === String(UI_STATE.isPTA)) {
@@ -45,21 +47,17 @@ function updateAllPrices() {
 
         const finalPrice = UI_STATE.isPTA ? product.base + UI_STATE.ptaTax : product.base;
         const priceDisplay = card.querySelector('.price-display');
+        
         if (priceDisplay) {
             priceDisplay.innerText = formatPrice(finalPrice);
-            // Re-trigger installment calculation if any
-            updateInstallmentPreview(card, finalPrice);
+            
+            // Update Installment via calculator module
+            const installmentDisplay = card.querySelector('.installment-display');
+            if (installmentDisplay && typeof window.calculateInstallment === 'function') {
+                installmentDisplay.innerText = window.calculateInstallment(finalPrice);
+            }
         }
     });
-}
-
-function updateInstallmentPreview(card, totalPrice) {
-    const installmentDisplay = card.querySelector('.installment-display');
-    if (installmentDisplay) {
-        // Simple 12-month installment with 15% markup as per architecture doc
-        const monthly = Math.round((totalPrice * 1.15) / 12);
-        installmentDisplay.innerText = formatPrice(monthly);
-    }
 }
 
 /**
@@ -94,6 +92,4 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initial Price Update
     updateAllPrices();
-
-    // Event Delegation for Swatches (Alternative to inline onclick)
 });
