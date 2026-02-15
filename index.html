@@ -4,157 +4,391 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elitephones | iPhone 17 Pro - Liquid Glass Experience</title>
-    <!-- Tailwind CSS for utility spacing -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Experience the iPhone 17 Pro in Cosmic Orange & Silver. Premium glassmorphism design with PTA approval and flexible installments.">
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- 1. Nav Bar -->
-    <nav class="fixed top-0 w-full glass-nav px-6 py-4 flex items-center justify-between">
-        <a href="#" class="text-2xl font-bold tracking-tighter">ELITEPHONES</a>
-        <div class="hidden md:flex gap-8 text-sm font-medium">
-            <a href="#features" class="hover:text-orange-500 transition">Features</a>
-            <a href="#specs" class="hover:text-orange-500 transition">Specs</a>
-            <a href="#buy" class="hover:text-orange-500 transition">Pricing</a>
+    <!-- 1. NAVIGATION BAR - Fixed Glass Effect -->
+    <nav class="glass-nav" id="main-nav">
+        <div class="nav-container">
+            <a href="#hero" class="logo-text">ELITEPHONES</a>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#specs" class="nav-link">Tech Specs</a>
+                <a href="#colors" class="nav-link">Colors</a>
+                <a href="#buy" class="nav-link">Pricing</a>
+            </div>
+            <a href="#buy" class="btn-glass-nav">Pre-Order</a>
         </div>
-        <a href="#buy" class="btn-glass py-2 px-6 text-sm">Pre-Order</a>
     </nav>
 
-    <!-- 2. Hero Section -->
-    <section id="hero" class="hero-long">
-        <img src="https://images.unsplash.com/photo-1759588071781-2c3ba9128497" alt="iPhone 17 Background" class="hero-bg">
-        <div class="hero-content">
-            <h2 class="text-orange-500 font-bold tracking-widest text-sm mb-4">THE ALL-NEW ARRIVAL</h2>
-            <h1 class="text-6xl md:text-8xl font-bold mb-6">iPhone 17 Pro</h1>
-            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">Crafted in Cosmic Orange Titanium. Designed for the infinite speed of Apple Intelligence.</p>
-            <div class="pta-container">
-                <span class="pta-toggle-label text-sm uppercase font-bold" data-active="false">Passport</span>
-                <label class="switch">
-                    <input type="checkbox" id="pta-toggle">
-                    <span class="slider"></span>
-                </label>
-                <span class="pta-toggle-label text-sm uppercase font-bold" data-active="true">PTA Approved</span>
-            </div>
+    <!-- 2. HERO SECTION - Long-Form Immersive -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-wrapper">
+            <img src="https://images.unsplash.com/photo-1759588071781-2c3ba9128497?w=1920&h=1080&fit=crop" alt="iPhone 17 Pro Hero" class="hero-bg-image" loading="eager">
+            <div class="hero-overlay"></div>
         </div>
-    </section>
-
-    <!-- 3. Features (Camera) -->
-    <section id="features" class="max-w-7xl mx-auto">
-        <h2 class="section-title">Visionary Perspective</h2>
-        <div class="grid-2 mt-12">
-            <div class="glass-card feature-card">
-                <img src="https://images.unsplash.com/photo-1759588071838-d560be56b2a2" alt="Camera Detail">
-                <h3 class="text-2xl font-bold mb-2">Liquid Lens Optics</h3>
-                <p class="text-gray-400">Next-gen 48MP spatial sensor with liquid-motion stabilization. Capture the world in three dimensions.</p>
-            </div>
-            <div class="glass-card feature-card">
-                <img src="https://images.unsplash.com/photo-1759588071781-2c3ba9128497" alt="A19 Chip">
-                <h3 class="text-2xl font-bold mb-2">A19 Liquid Silicon</h3>
-                <p class="text-gray-400">The first 2nm architecture chip. 40% faster performance with zero thermal throttling.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Tech Specs -->
-    <section id="specs" class="bg-zinc-950">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="section-title text-gradient-orange">Engineered Beyond.</h2>
-            <div class="grid-3 mt-16">
-                <div class="spec-item text-center">
-                    <img src="https://images.unsplash.com/photo-1759588071814-f960ed8f7ee8" class="rounded-xl mb-4 w-full h-48 object-cover" alt="Display">
-                    <h4 class="font-bold text-xl mb-2">2500 nits Display</h4>
-                    <p class="text-sm text-gray-500">Super Retina XDR with 144Hz Liquid ProMotion.</p>
+        <div class="hero-content-wrapper">
+            <div class="hero-content">
+                <span class="hero-label">THE ALL-NEW ARRIVAL</span>
+                <h1 class="hero-title">iPhone 17 Pro</h1>
+                <p class="hero-subtitle">Crafted in Cosmic Orange Titanium. <br>Designed for the infinite speed of Apple Intelligence.</p>
+                
+                <!-- PTA Toggle Inline Hero -->
+                <div class="pta-container">
+                    <span class="pta-label" data-active="false">Passport</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="pta-toggle-hero" aria-label="Toggle PTA Tax">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <span class="pta-label" data-active="true">PTA Approved</span>
                 </div>
-                <div class="spec-item text-center">
-                    <img src="https://images.unsplash.com/photo-1759588071778-8f55586808dc" class="rounded-xl mb-4 w-full h-48 object-cover" alt="Hardware">
-                    <h4 class="font-bold text-xl mb-2">Grade 5 Titanium</h4>
-                    <p class="text-sm text-gray-500">Enhanced durability with 15% lighter chassis.</p>
+
+                <div class="hero-price-preview">
+                    <p class="price-label">Starting from</p>
+                    <h2 class="price-value" id="hero-price">Rs. 445,000</h2>
                 </div>
-                <div class="spec-item text-center">
-                    <img src="https://images.unsplash.com/photo-1764746218363-6cb017fcd926" class="rounded-xl mb-4 w-full h-48 object-cover" alt="Texture">
-                    <h4 class="font-bold text-xl mb-2">Tactile Finish</h4>
-                    <p class="text-sm text-gray-500">Micro-etched glass for the ultimate grip.</p>
+
+                <a href="#buy" class="btn-primary-hero">Explore Pricing</a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll to Explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- 3. FEATURES SECTION - Camera & Performance -->
+    <section id="features" class="features-section">
+        <div class="section-container">
+            <h2 class="section-title" data-aos="fade-up">Visionary Perspective</h2>
+            <p class="section-subtitle">Next-generation imaging meets liquid silicon intelligence.</p>
+
+            <div class="features-grid">
+                <!-- Feature Card 1: Camera -->
+                <div class="glass-card feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1759588071838-d560be56b2a2?w=800&h=600&fit=crop" alt="Liquid Lens Optics" class="feature-image" loading="lazy">
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Liquid Lens Optics</h3>
+                        <p class="feature-description">Next-gen 48MP spatial sensor with liquid-motion stabilization. Capture the world in three dimensions with stunning clarity and depth.</p>
+                        <ul class="feature-list">
+                            <li>48MP Fusion Camera</li>
+                            <li>8K ProRes Video</li>
+                            <li>Spatial 3D Capture</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature Card 2: Chip -->
+                <div class="glass-card feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1759588071781-2c3ba9128497?w=800&h=600&fit=crop" alt="A19 Liquid Silicon" class="feature-image" loading="lazy">
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">A19 Liquid Silicon</h3>
+                        <p class="feature-description">The first 2nm architecture chip. 40% faster performance with zero thermal throttling. Redefining what's possible on a smartphone.</p>
+                        <ul class="feature-list">
+                            <li>2nm Process Technology</li>
+                            <li>40% Faster GPU</li>
+                            <li>Zero Thermal Lag</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. Color Selector Journey -->
-    <section id="colors" class="max-w-5xl mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-4">Choose your finish.</h2>
-        <div class="flex justify-center gap-6 mb-12">
-            <div class="swatch active bg-orange-500" data-color="orange"></div>
-            <div class="swatch bg-zinc-400" data-color="silver"></div>
-        </div>
-        <div class="glass-card p-4 inline-block">
-            <img id="hero-product-img" src="https://images.unsplash.com/photo-1764746049934-69d8beed54b9" alt="Product Select" class="max-w-full rounded-2xl h-[500px] object-cover">
+    <!-- 4. TECH SPECS SECTION - Grid Display -->
+    <section id="specs" class="specs-section">
+        <div class="section-container">
+            <h2 class="section-title gradient-text" data-aos="fade-up">Engineered Beyond.</h2>
+            <p class="section-subtitle">Every detail crafted to perfection.</p>
+
+            <div class="specs-grid">
+                <!-- Spec 1: Display -->
+                <div class="spec-card glass-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="spec-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1759588071814-f960ed8f7ee8?w=600&h=400&fit=crop" alt="Super Retina Display" class="spec-image" loading="lazy">
+                    </div>
+                    <div class="spec-content">
+                        <h4 class="spec-title">2500 nits Display</h4>
+                        <p class="spec-description">Super Retina XDR with 144Hz Liquid ProMotion technology.</p>
+                    </div>
+                </div>
+
+                <!-- Spec 2: Titanium -->
+                <div class="spec-card glass-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="spec-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1759588071778-8f55586808dc?w=600&h=400&fit=crop" alt="Grade 5 Titanium" class="spec-image" loading="lazy">
+                    </div>
+                    <div class="spec-content">
+                        <h4 class="spec-title">Grade 5 Titanium</h4>
+                        <p class="spec-description">Enhanced durability with 15% lighter aerospace-grade chassis.</p>
+                    </div>
+                </div>
+
+                <!-- Spec 3: Texture -->
+                <div class="spec-card glass-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="spec-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1764746218363-6cb017fcd926?w=600&h=400&fit=crop" alt="Tactile Finish" class="spec-image" loading="lazy">
+                    </div>
+                    <div class="spec-content">
+                        <h4 class="spec-title">Tactile Finish</h4>
+                        <p class="spec-description">Micro-etched glass surface for the ultimate premium grip.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- 6. PTA Toggle & Installments Calculator -->
-    <section id="buy" class="py-24">
-        <div class="max-w-4xl mx-auto glass-card p-12 text-center">
-            <h2 class="text-5xl font-bold mb-2" id="final-price">Rs. 445,000</h2>
-            <p class="text-gray-400 mb-8">Estimated Checkout Price</p>
+    <!-- 5. COLOR SELECTOR JOURNEY -->
+    <section id="colors" class="colors-section">
+        <div class="section-container-narrow">
+            <h2 class="section-title" data-aos="fade-up">Choose Your Finish.</h2>
+            <p class="section-subtitle">Two stunning titanium colorways.</p>
+
+            <!-- Color Swatches -->
+            <div class="color-swatches" data-aos="fade-up" data-aos-delay="100">
+                <button class="color-swatch active" data-color="orange" aria-label="Cosmic Orange">
+                    <span class="swatch-circle orange-swatch"></span>
+                    <span class="swatch-label">Cosmic Orange</span>
+                </button>
+                <button class="color-swatch" data-color="silver" aria-label="Liquid Silver">
+                    <span class="swatch-circle silver-swatch"></span>
+                    <span class="swatch-label">Liquid Silver</span>
+                </button>
+            </div>
+
+            <!-- Product Image Showcase -->
+            <div class="product-showcase glass-card" data-aos="zoom-in" data-aos-delay="200">
+                <img id="product-display-img" 
+                     src="https://images.unsplash.com/photo-1764746049934-69d8beed54b9?w=1200&h=800&fit=crop" 
+                     alt="iPhone 17 Pro in Cosmic Orange" 
+                     class="product-display-image"
+                     loading="lazy">
+            </div>
+
+            <!-- Additional Color Details -->
+            <div class="color-details" id="color-details">
+                <h3 class="color-detail-title">Cosmic Orange Titanium</h3>
+                <p class="color-detail-text">A bold statement of innovation. The signature orange hue is achieved through a precision anodization process, creating a vibrant, durable finish that captures light beautifully.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRICING & INSTALLMENTS CALCULATOR -->
+    <section id="buy" class="pricing-section">
+        <div class="section-container-narrow">
+            <div class="pricing-card glass-card-prominent" data-aos="fade-up">
+                
+                <!-- Main Price Display -->
+                <div class="price-display">
+                    <h2 class="final-price" id="final-price">Rs. 445,000</h2>
+                    <p class="price-caption">Estimated Checkout Price</p>
+                </div>
+
+                <!-- PTA Toggle -->
+                <div class="pta-toggle-section">
+                    <h4 class="toggle-section-title">Tax Configuration</h4>
+                    <div class="pta-container-main">
+                        <span class="pta-label-main" data-active="false">Passport (Non-PTA)</span>
+                        <label class="toggle-switch-main">
+                            <input type="checkbox" id="pta-toggle-main" aria-label="Toggle PTA Tax">
+                            <span class="toggle-slider-main"></span>
+                        </label>
+                        <span class="pta-label-main" data-active="true">PTA Approved</span>
+                    </div>
+                    <p class="pta-info-text">Enable PTA to include Rs. 125,000 government tax. We handle full registration.</p>
+                </div>
+
+                <!-- Installment Plans -->
+                <div class="installment-section">
+                    <h4 class="toggle-section-title">Payment Journey</h4>
+                    <div class="installment-buttons">
+                        <button class="installment-btn active" data-months="12" aria-label="12 Month Plan">
+                            <span class="installment-duration">12</span>
+                            <span class="installment-label">Months</span>
+                        </button>
+                        <button class="installment-btn" data-months="24" aria-label="24 Month Plan">
+                            <span class="installment-duration">24</span>
+                            <span class="installment-label">Months</span>
+                        </button>
+                        <button class="installment-btn" data-months="36" aria-label="36 Month Plan">
+                            <span class="installment-duration">36</span>
+                            <span class="installment-label">Months</span>
+                        </button>
+                    </div>
+                    
+                    <div class="monthly-price-display">
+                        <p class="monthly-price" id="monthly-price">Rs. 42,646 / month</p>
+                        <p class="installment-note">Zero markup plans available on select partner cards.*</p>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="https://wa.me/923204589040?text=Hi!%20I%27m%20interested%20in%20the%20iPhone%2017%20Pro" 
+                   class="btn-primary-large" 
+                   target="_blank" 
+                   rel="noopener">
+                    Confirm Order on WhatsApp
+                </a>
+
+                <p class="secure-checkout-text">🔒 Secure checkout via WhatsApp Business</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FAQ ACCORDION -->
+    <section id="faq" class="faq-section">
+        <div class="section-container-narrow">
+            <h2 class="section-title" data-aos="fade-up">Common Queries</h2>
+            <p class="section-subtitle">Everything you need to know.</p>
+
+            <div class="faq-accordion" data-aos="fade-up" data-aos-delay="100">
+                
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What's included in the box?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Every iPhone 17 Pro from Elitephones comes with the USB-C Braided Charge Cable, Elitecare Warranty Card, and a complimentary Premium Glass Protector. We also include our signature orange packaging for the full experience.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How does the PTA Approval work?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Select the PTA Approved toggle to include the Rs. 125,000 government tax in your final price. We handle the entire registration process through our Elite-Express service within 24-48 hours of delivery.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Is delivery available in Lahore?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer same-day hand-delivery within Lahore (free for orders above Rs. 400,000) and insured nationwide shipping through TCS Express. International orders are also available.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What are the installment options?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer flexible installment plans of 12, 24, or 36 months. Zero markup options are available with HBL, Meezan Bank, and Allied Bank credit cards. Other cards may have standard markup rates applied.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER & RETAIL -->
+    <footer class="footer-section">
+        <div class="section-container">
             
-            <div class="mb-12">
-                <h4 class="text-sm uppercase tracking-widest text-gray-500 mb-4">Payment Journey</h4>
-                <div class="flex justify-center gap-4">
-                    <button class="installment-btn active" data-months="12">12 Mos</button>
-                    <button class="installment-btn" data-months="24">24 Mos</button>
-                    <button class="installment-btn" data-months="36">36 Mos</button>
-                </div>
-                <p class="mt-4 text-orange-500 font-bold text-2xl" id="installment-price">Rs. 42,646 / mo</p>
-                <p class="text-xs text-gray-600 mt-2">Zero markup plans available on select cards.*</p>
-            </div>
-
-            <a href="https://wa.me/923204589040" class="btn-glass px-12 py-5 text-xl">Confirm Order on WhatsApp</a>
-        </div>
-    </section>
-
-    <!-- 7. Accordion (FAQ) -->
-    <section class="max-w-3xl mx-auto pb-24">
-        <h2 class="text-3xl font-bold mb-8 text-center">Common Queries</h2>
-        <div class="faq-item">
-            <div class="faq-question">Whats included in the box? <span>+</span></div>
-            <div class="faq-answer">Every iPhone 17 Pro from Elitephones comes with the USB-C Braided Charge Cable, Elitecare Warranty Card, and a complementary Glass Protector.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">How does the PTA Approval work? <span>+</span></div>
-            <div class="faq-answer">Select the PTA Approved toggle to include government taxes in your price. We handle the entire registration process using our Elite-Express service.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Is delivery available in Lahore? <span>+</span></div>
-            <div class="faq-answer">Yes! We offer same-day hand-delivery within Lahore and insured nationwide shipping through TCS.</div>
-        </div>
-    </section>
-
-    <!-- 8. Packaging/Retail & Footer -->
-    <footer class="border-t border-zinc-800 pt-24 pb-12 bg-black">
-        <div class="max-w-7xl mx-auto px-6 grid-2">
-            <div>
-                <img src="https://images.unsplash.com/photo-1764746250417-695027581699" alt="Packaging" class="rounded-3xl mb-8 w-full h-[300px] object-cover opacity-80">
-                <h3 class="text-2xl font-bold">Elitephones Lahore</h3>
-                <p class="text-gray-500 mt-2">Shop #G-24, Hafiz Center, Lahore</p>
-            </div>
-            <div class="flex flex-col justify-end text-right">
-                <p class="text-sm text-gray-600 mb-4">&copy; 2024 Elitephones. iPhone is a trademark of Apple Inc.</p>
-                <div class="flex gap-4 justify-end">
-                    <a href="https://wa.me/923204589040" class="text-orange-500">WhatsApp Sales</a>
-                    <span class="text-gray-800">|</span>
-                    <a href="#" class="text-orange-500">Instagram</a>
+            <!-- Retail Imagery -->
+            <div class="footer-retail" data-aos="fade-up">
+                <div class="retail-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1764746250417-695027581699?w=1200&h=600&fit=crop" 
+                         alt="Elitephones Retail Experience" 
+                         class="retail-image"
+                         loading="lazy">
                 </div>
             </div>
+
+            <!-- Footer Content Grid -->
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-brand">ELITEPHONES</h3>
+                    <p class="footer-tagline">Premium devices. Liquid experiences.</p>
+                    <address class="footer-address">
+                        Shop #G-24, Hafiz Center<br>
+                        Main Boulevard, Gulberg III<br>
+                        Lahore, Pakistan
+                    </address>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#specs">Tech Specs</a></li>
+                        <li><a href="#colors">Colors</a></li>
+                        <li><a href="#buy">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/923204589040" target="_blank" rel="noopener">WhatsApp Sales</a></li>
+                        <li><a href="tel:+923204589040">+92 320 4589040</a></li>
+                        <li><a href="https://instagram.com/elitephones" target="_blank" rel="noopener">Instagram</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Hours</h4>
+                    <p class="footer-text">Monday - Saturday<br>11:00 AM - 9:00 PM</p>
+                    <p class="footer-text">Sunday<br>12:00 PM - 8:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 Elitephones. All rights reserved.</p>
+                <p class="footer-disclaimer">iPhone is a trademark of Apple Inc., registered in the U.S. and other countries.</p>
+            </div>
+
         </div>
     </footer>
 
-    <!-- WhatsApp Widget -->
-    <a href="https://wa.me/923204589040" class="wa-widget">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:white;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    <!-- WhatsApp Floating Widget -->
+    <a href="https://wa.me/923204589040" 
+       class="whatsapp-widget" 
+       target="_blank" 
+       rel="noopener"
+       aria-label="Contact us on WhatsApp">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.826.736 5.587 2.136 8.022L0 32l8.2-2.154A15.905 15.905 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.422 0-4.797-.661-6.867-1.906l-.493-.297-5.109 1.34 1.364-4.987-.325-.51A13.29 13.29 0 012.667 16c0-7.364 5.97-13.333 13.333-13.333S29.333 8.636 29.333 16 23.364 29.333 16 29.333z" fill="white"/>
+            <path d="M12.133 9.6c-.267-.6-.547-.613-.8-.627-.207-.013-.443-.013-.68-.013-.237 0-.623.09-.95.447-.326.357-1.246 1.217-1.246 2.97s1.276 3.443 1.453 3.68c.177.237 2.494 3.81 6.043 5.343.844.364 1.503.581 2.016.743.847.27 1.617.232 2.226.14.679-.102 2.09-.855 2.385-1.68.295-.825.295-1.533.207-1.68-.088-.147-.325-.237-.68-.414-.355-.177-2.098-1.035-2.423-1.153-.325-.118-.562-.177-.8.177-.237.355-.917 1.153-1.123 1.39-.207.237-.414.268-.77.09-.355-.177-1.5-.553-2.857-1.763-1.056-.942-1.768-2.105-1.975-2.462-.207-.357-.022-.55.156-.728.16-.16.355-.414.533-.62.177-.207.237-.355.355-.593.118-.237.06-.444-.03-.62-.09-.177-.8-1.93-1.096-2.645z" fill="white"/>
+        </svg>
     </a>
 
+    <!-- JavaScript -->
     <script src="js/app.js"></script>
+
 </body>
 </html>
