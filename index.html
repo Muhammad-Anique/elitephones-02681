@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elitephones | iPhone 17 Series</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts: Inter for Apple-style typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; }
+        .glass-nav { background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(20px); }
+        .btn-apple { background: #0071e3; color: #fff; transition: all 0.3s ease; }
+        .btn-apple:hover { background: #0077ed; opacity: 0.9; }
+        .product-card { background: #161617; border-radius: 18px; }
+        .badge-pta { background: #32d74b; color: #000; font-size: 0.7rem; font-weight: 700; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight">Elitephones</a>
+            <div class="hidden md:flex space-x-8 text-sm font-light text-gray-300">
+                <a href="#iphone-17-pro" class="hover:text-white">iPhone 17 Pro</a>
+                <a href="#iphone-17" class="hover:text-white">iPhone 17</a>
+                <a href="#support" class="hover:text-white">Support</a>
+            </div>
+            <a href="https://wa.me/923204589040" class="text-sm bg-white text-black px-4 py-1 rounded-full font-medium">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-orange-500 font-semibold mb-4 tracking-wide uppercase text-sm">New Arrival</h2>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">iPhone 17 Pro</h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-10 font-light">Titanium. In two stunning new finishes.</p>
+            <div class="flex justify-center flex-wrap gap-4">
+                <a href="#catalog" class="btn-apple px-8 py-3 rounded-full text-lg font-medium">Buy Now</a>
+                <a href="https://wa.me/923204589040" class="text-blue-500 hover:underline px-8 py-3 text-lg font-medium flex items-center">
+                    Check PTA Rates <span class="ml-2 text-xl">→</span>
+                </a>
+            </div>
+        </div>
+        <div class="mt-16 max-w-5xl mx-auto px-4">
+            <!-- Main Hero Image: iPhone 17 Pro Orange/Titanium concept -->
+            <img src="https://images.unsplash.com/photo-1621330396173-e41b1cafd17f?w=1200&h=600&fit=crop" 
+                 alt="iPhone 17 Pro in Orange Titanium" 
+                 class="w-full h-auto rounded-3xl shadow-2xl transition-transform duration-700 hover:scale-105">
+        </div>
+    </section>
+
+    <!-- Product Catalog -->
+    <section id="catalog" class="py-24 bg-white text-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Which iPhone 17 is right for you?</h2>
+                <p class="text-gray-500 text-lg">Compare models and find your perfect match.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- iPhone 17 Pro Max -->
+                <article class="product-card bg-gray-50 p-8 flex flex-col items-center text-center shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1696446701796-da61225697cc?w=600&h=600&fit=crop" alt="iPhone 17 Pro Max" class="w-64 mb-8">
+                    <div class="mt-auto">
+                        <span class="text-xs font-bold text-orange-600 mb-2 block uppercase">Top Tier</span>
+                        <h3 class="text-2xl font-bold mb-2">iPhone 17 Pro Max</h3>
+                        <p class="text-gray-600 mb-6 text-sm">6.9" Super Retina XDR display, ProMotion, Titanium.</p>
+                        <p class="text-xl font-semibold mb-6">Starting from Rs. 445,000</p>
+                        <button onclick="selectProduct('iPhone 17 Pro Max')" class="btn-apple w-full py-2 rounded-lg">Customize</button>
+                    </div>
+                </article>
+
+                <!-- iPhone 17 Pro -->
+                <article class="product-card bg-gray-50 p-8 flex flex-col items-center text-center shadow-sm border-2 border-blue-500">
+                    <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=600&h=600&fit=crop" alt="iPhone 17 Pro" class="w-64 mb-8">
+                    <div class="mt-auto">
+                        <span class="text-xs font-bold text-blue-600 mb-2 block uppercase">Most Popular</span>
+                        <h3 class="text-2xl font-bold mb-2">iPhone 17 Pro</h3>
+                        <p class="text-gray-600 mb-6 text-sm">6.3" Super Retina XDR display, ProMotion, Titanium.</p>
+                        <p class="text-xl font-semibold mb-6">Starting from Rs. 395,000</p>
+                        <button onclick="selectProduct('iPhone 17 Pro')" class="btn-apple w-full py-2 rounded-lg">Customize</button>
+                    </div>
+                </article>
+
+                <!-- iPhone 17 -->
+                <article class="product-card bg-gray-50 p-8 flex flex-col items-center text-center shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1591337676887-a217a6970a8a?w=600&h=600&fit=crop" alt="iPhone 17" class="w-64 mb-8">
+                    <div class="mt-auto">
+                        <span class="text-xs font-bold text-gray-500 mb-2 block uppercase">Essential</span>
+                        <h3 class="text-2xl font-bold mb-2">iPhone 17</h3>
+                        <p class="text-gray-600 mb-6 text-sm">6.1" display, Aluminum with color-infused glass back.</p>
+                        <p class="text-xl font-semibold mb-6">Starting from Rs. 285,000</p>
+                        <button onclick="selectProduct('iPhone 17')" class="btn-apple w-full py-2 rounded-lg">Customize</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization / Call to Action -->
+    <section class="py-24 bg-black">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-8">Ready to upgrade?</h3>
+            <p class="text-gray-400 mb-12">Connect directly with our sales team on WhatsApp to confirm PTA status and availability.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl w-full md:w-64">
+                    <h4 class="text-green-500 font-bold mb-2">PTA Approved</h4>
+                    <p class="text-sm text-gray-500 italic">Full network compliance in Pakistan.</p>
+                </div>
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl w-full md:w-64">
+                    <h4 class="text-blue-500 font-bold mb-2">Active Warranty</h4>
+                    <p class="text-sm text-gray-500 italic">Global & Local Apple coverage.</p>
+                </div>
+            </div>
+            <div class="mt-12">
+                <a href="https://wa.me/923204589040" class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-full text-xl font-bold transition-all">
+                    Order via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-900 bg-black text-gray-500">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <h4 class="text-white font-bold text-xl mb-4">Elitephones</h4>
+                    <p class="text-sm leading-relaxed mb-4">Lahore's premier destination for high-end Apple products. Providing genuine devices with guaranteed PTA status and unmatched service excellence.</p>
+                </div>
+                <div>
+                    <h5 class="text-white font-medium mb-4">Explore</h5>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="hover:text-white">iPhone 17 Pro</a></li>
+                        <li><a href="#" class="hover:text-white">iPhone 17</a></li>
+                        <li><a href="#" class="hover:text-white">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-medium mb-4">Contact</h5>
+                    <ul class="text-sm space-y-2">
+                        <li>+92 320 4589040</li>
+                        <li>Liberty Market, Lahore</li>
+                        <li>orders@elitephones.pk</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-900 text-xs text-center flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2024 Elitephones. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript Logic -->
+    <script src="js/script.js"></script>
+</body>
+</html>
