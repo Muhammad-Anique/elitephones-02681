@@ -3,192 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elitephones | iPhone 17 Series - Lahore's Premium Destination</title>
-    <!-- Tailwind CSS for structure -->
+    <title>Elitephones | iPhone 17 Pro - Liquid Glass Experience</title>
+    <!-- Tailwind CSS for utility spacing -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Main Style -->
     <link rel="stylesheet" href="css/main.css">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="antialiased">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass-nav">
-        <div class="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight">Elitephones</a>
-            <div class="hidden md:flex space-x-8 text-sm">
-                <a href="#store" class="nav-link">Store</a>
-                <a href="#specs" class="nav-link">Tech Specs</a>
-                <a href="#location" class="nav-link">Location</a>
-            </div>
-            <a href="https://wa.me/923204589040" class="text-sm bg-black text-white px-4 py-1.5 rounded-full font-medium transition-transform hover:scale-105">
-                Inquire Now
-            </a>
+    <!-- 1. Nav Bar -->
+    <nav class="fixed top-0 w-full glass-nav px-6 py-4 flex items-center justify-between">
+        <a href="#" class="text-2xl font-bold tracking-tighter">ELITEPHONES</a>
+        <div class="hidden md:flex gap-8 text-sm font-medium">
+            <a href="#features" class="hover:text-orange-500 transition">Features</a>
+            <a href="#specs" class="hover:text-orange-500 transition">Specs</a>
+            <a href="#buy" class="hover:text-orange-500 transition">Pricing</a>
         </div>
+        <a href="#buy" class="btn-glass py-2 px-6 text-sm">Pre-Order</a>
     </nav>
 
-    <!-- Hero -->
-    <header class="hero-section text-center">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="hero-subhead mb-2">Exclusive Arrival</h2>
-            <h1 class="hero-title text-black">iPhone 17 Pro</h1>
-            <p class="text-xl md:text-2xl text-gray-500 font-normal mb-8">Titanium performance. Built for Apple Intelligence.</p>
-            <div class="flex flex-col items-center">
-                <div class="pta-toggle-container">
-                    <span class="pta-toggle-label" data-active="false">Passport Price</span>
-                    <label class="switch">
-                        <input type="checkbox" id="pta-toggle">
-                        <span class="slider"></span>
-                    </label>
-                    <span class="pta-toggle-label" data-active="true">PTA Approved</span>
-                </div>
+    <!-- 2. Hero Section -->
+    <section id="hero" class="hero-long">
+        <img src="https://images.unsplash.com/photo-1759588071781-2c3ba9128497" alt="iPhone 17 Background" class="hero-bg">
+        <div class="hero-content">
+            <h2 class="text-orange-500 font-bold tracking-widest text-sm mb-4">THE ALL-NEW ARRIVAL</h2>
+            <h1 class="text-6xl md:text-8xl font-bold mb-6">iPhone 17 Pro</h1>
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">Crafted in Cosmic Orange Titanium. Designed for the infinite speed of Apple Intelligence.</p>
+            <div class="pta-container">
+                <span class="pta-toggle-label text-sm uppercase font-bold" data-active="false">Passport</span>
+                <label class="switch">
+                    <input type="checkbox" id="pta-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="pta-toggle-label text-sm uppercase font-bold" data-active="true">PTA Approved</span>
             </div>
         </div>
-        <div class="mt-12 max-w-5xl mx-auto px-4 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1696446701796-da61225697cc?w=1200&h=600&fit=crop" 
-                 alt="iPhone 17 Pro Titanium" 
-                 class="w-full h-auto rounded-3xl product-image" style="transition: opacity 0.5s ease;">
-        </div>
-    </header>
+    </section>
 
-    <!-- Store Section -->
-    <main id="store" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16">
-                <h2 class="text-4xl font-bold tracking-tight text-center">Select your model.</h2>
+    <!-- 3. Features (Camera) -->
+    <section id="features" class="max-w-7xl mx-auto">
+        <h2 class="section-title">Visionary Perspective</h2>
+        <div class="grid-2 mt-12">
+            <div class="glass-card feature-card">
+                <img src="https://images.unsplash.com/photo-1759588071838-d560be56b2a2" alt="Camera Detail">
+                <h3 class="text-2xl font-bold mb-2">Liquid Lens Optics</h3>
+                <p class="text-gray-400">Next-gen 48MP spatial sensor with liquid-motion stabilization. Capture the world in three dimensions.</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- 17 Pro Max -->
-                <article class="product-card p-10 flex flex-col items-center" data-product-id="pro-max">
-                    <img src="https://images.unsplash.com/photo-1621330396173-e41b1cafd17f?w=600&h=600&fit=crop" 
-                         alt="iPhone 17 Pro Max" class="w-full product-image mb-8" loading="lazy">
-                    
-                    <div class="swatch-group">
-                        <div class="swatch active" style="background: #3c3d3a;" data-color="Natural Titanium" onclick="swapColor('pro-max', 'Natural Titanium', 'https://images.unsplash.com/photo-1621330396173-e41b1cafd17f?w=600&h=600&fit=crop')"></div>
-                        <div class="swatch" style="background: #b58d6b;" data-color="Desert Titanium" onclick="swapColor('pro-max', 'Desert Titanium', 'https://images.unsplash.com/photo-1696446701796-da61225697cc?w=600&h=600&fit=crop')"></div>
-                    </div>
-
-                    <h3 class="text-2xl font-bold mb-1">iPhone 17 Pro Max</h3>
-                    <p class="text-sm text-gray-500 mb-6">6.9" Super Retina XDR Display</p>
-                    
-                    <div class="price-box w-full text-center">
-                        <div class="price-display text-xl font-semibold">Rs. 445,000</div>
-                        <div class="text-xs text-gray-400 mt-1 mb-6">Or approx. <span class="installment-display">Rs. 42,646</span>/mo. for 12 mos.*</div>
-                        <a href="https://wa.me/923204589040" class="btn-primary block w-full text-center">Buy</a>
-                    </div>
-                </article>
-
-                <!-- 17 Pro -->
-                <article class="product-card p-10 flex flex-col items-center" data-product-id="pro">
-                    <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=600&h=600&fit=crop" 
-                         alt="iPhone 17 Pro" class="w-full product-image mb-8" loading="lazy">
-                    
-                    <div class="swatch-group">
-                        <div class="swatch active" style="background: #3c3d3a;" data-color="Natural Titanium" onclick="swapColor('pro', 'Natural Titanium', 'https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=600&h=600&fit=crop')"></div>
-                        <div class="swatch" style="background: #1d1d1f;" data-color="Space Black" onclick="swapColor('pro', 'Space Black', 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&h=600&fit=crop')"></div>
-                    </div>
-
-                    <h3 class="text-2xl font-bold mb-1">iPhone 17 Pro</h3>
-                    <p class="text-sm text-gray-500 mb-6">6.3" Super Retina XDR Display</p>
-                    
-                    <div class="price-box w-full text-center">
-                        <div class="price-display text-xl font-semibold">Rs. 395,000</div>
-                        <div class="text-xs text-gray-400 mt-1 mb-6">Or approx. <span class="installment-display">Rs. 37,854</span>/mo. for 12 mos.*</div>
-                        <a href="https://wa.me/923204589040" class="btn-primary block w-full text-center">Buy</a>
-                    </div>
-                </article>
-
-                <!-- iPhone 17 -->
-                <article class="product-card p-10 flex flex-col items-center" data-product-id="standard">
-                    <img src="https://images.unsplash.com/photo-1591337676887-a217a6970a8a?w=600&h=600&fit=crop" 
-                         alt="iPhone 17" class="w-full product-image mb-8" loading="lazy">
-                    
-                    <div class="swatch-group">
-                        <div class="swatch active" style="background: #2b4c6e;" data-color="Blue" onclick="swapColor('standard', 'Blue', 'https://images.unsplash.com/photo-1591337676887-a217a6970a8a?w=600&h=600&fit=crop')"></div>
-                        <div class="swatch" style="background: #e2b7c1;" data-color="Pink" onclick="swapColor('standard', 'Pink', 'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=600&h=600&fit=crop')"></div>
-                    </div>
-
-                    <h3 class="text-2xl font-bold mb-1">iPhone 17</h3>
-                    <p class="text-sm text-gray-500 mb-6">6.1" OLED Display</p>
-                    
-                    <div class="price-box w-full text-center">
-                        <div class="price-display text-xl font-semibold">Rs. 285,000</div>
-                        <div class="text-xs text-gray-400 mt-1 mb-6">Or approx. <span class="installment-display">Rs. 27,313</span>/mo. for 12 mos.*</div>
-                        <a href="https://wa.me/923204589040" class="btn-primary block w-full text-center">Buy</a>
-                    </div>
-                </article>
-
+            <div class="glass-card feature-card">
+                <img src="https://images.unsplash.com/photo-1759588071781-2c3ba9128497" alt="A19 Chip">
+                <h3 class="text-2xl font-bold mb-2">A19 Liquid Silicon</h3>
+                <p class="text-gray-400">The first 2nm architecture chip. 40% faster performance with zero thermal throttling.</p>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Technical Specs Grid -->
-    <section id="specs" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12">Performance Redefined.</h2>
-            <div class="specs-grid">
-                <div class="spec-item">
-                    <h4 class="font-bold mb-2">A19 Pro Chip</h4>
-                    <p class="text-gray-500 text-sm">Industry-leading speed with enhanced neural engine for AI tasks.</p>
+    <!-- 4. Tech Specs -->
+    <section id="specs" class="bg-zinc-950">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="section-title text-gradient-orange">Engineered Beyond.</h2>
+            <div class="grid-3 mt-16">
+                <div class="spec-item text-center">
+                    <img src="https://images.unsplash.com/photo-1759588071814-f960ed8f7ee8" class="rounded-xl mb-4 w-full h-48 object-cover" alt="Display">
+                    <h4 class="font-bold text-xl mb-2">2500 nits Display</h4>
+                    <p class="text-sm text-gray-500">Super Retina XDR with 144Hz Liquid ProMotion.</p>
                 </div>
-                <div class="spec-item">
-                    <h4 class="font-bold mb-2">Pro Camera System</h4>
-                    <p class="text-gray-500 text-sm">New 48MP Ultra Wide sensor with next-gen spatial video recording.</p>
+                <div class="spec-item text-center">
+                    <img src="https://images.unsplash.com/photo-1759588071778-8f55586808dc" class="rounded-xl mb-4 w-full h-48 object-cover" alt="Hardware">
+                    <h4 class="font-bold text-xl mb-2">Grade 5 Titanium</h4>
+                    <p class="text-sm text-gray-500">Enhanced durability with 15% lighter chassis.</p>
                 </div>
-                <div class="spec-item">
-                    <h4 class="font-bold mb-2">Battery Life</h4>
-                    <p class="text-gray-500 text-sm">All-day efficiency. Up to 29 hours video playback on Pro Max.</p>
-                </div>
-                <div class="spec-item">
-                    <h4 class="font-bold mb-2">Action Button</h4>
-                    <p class="text-gray-500 text-sm">Customized control for your favorite shortcut or function.</p>
-                </div>
-                <div class="spec-item">
-                    <h4 class="font-bold mb-2">USB-C with USB 3</h4>
-                    <p class="text-gray-500 text-sm">Up to 20x faster file transfers compared to previous generations.</p>
-                </div>
-                <div class="spec-item">
-                    <h4 class="font-bold mb-2">Display</h4>
-                    <p class="text-gray-500 text-sm">Always-On display with ProMotion 120Hz refresh rates.</p>
+                <div class="spec-item text-center">
+                    <img src="https://images.unsplash.com/photo-1764746218363-6cb017fcd926" class="rounded-xl mb-4 w-full h-48 object-cover" alt="Texture">
+                    <h4 class="font-bold text-xl mb-2">Tactile Finish</h4>
+                    <p class="text-sm text-gray-500">Micro-etched glass for the ultimate grip.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Location -->
-    <footer id="location" class="py-20 bg-gray-50 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-bold mb-4">Elitephones Lahore</h3>
-                    <address class="leading-relaxed mb-6">
-                        Shop #G-24, Ground Floor<br>
-                        Hafiz Center, Main Boulevard<br>
-                        Gulberg III, Lahore, Pakistan
-                    </address>
-                    <div class="flex gap-4">
-                        <a href="https://wa.me/923204589040" class="text-blue-600 font-medium">WhatsApp Sales</a>
-                        <span class="text-gray-300">|</span>
-                        <span class="text-gray-600">Open Daily: 11 AM - 9 PM</span>
-                    </div>
+    <!-- 5. Color Selector Journey -->
+    <section id="colors" class="max-w-5xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-4">Choose your finish.</h2>
+        <div class="flex justify-center gap-6 mb-12">
+            <div class="swatch active bg-orange-500" data-color="orange"></div>
+            <div class="swatch bg-zinc-400" data-color="silver"></div>
+        </div>
+        <div class="glass-card p-4 inline-block">
+            <img id="hero-product-img" src="https://images.unsplash.com/photo-1764746049934-69d8beed54b9" alt="Product Select" class="max-w-full rounded-2xl h-[500px] object-cover">
+        </div>
+    </section>
+
+    <!-- 6. PTA Toggle & Installments Calculator -->
+    <section id="buy" class="py-24">
+        <div class="max-w-4xl mx-auto glass-card p-12 text-center">
+            <h2 class="text-5xl font-bold mb-2" id="final-price">Rs. 445,000</h2>
+            <p class="text-gray-400 mb-8">Estimated Checkout Price</p>
+            
+            <div class="mb-12">
+                <h4 class="text-sm uppercase tracking-widest text-gray-500 mb-4">Payment Journey</h4>
+                <div class="flex justify-center gap-4">
+                    <button class="installment-btn active" data-months="12">12 Mos</button>
+                    <button class="installment-btn" data-months="24">24 Mos</button>
+                    <button class="installment-btn" data-months="36">36 Mos</button>
                 </div>
-                <div class="text-gray-500 text-sm self-end">
-                    <p>&copy; 2024 Elitephones. All rights reserved. iPhone is a trademark of Apple Inc. *Installment calculations include an estimated 15% markup and are subject to bank approval.</p>
+                <p class="mt-4 text-orange-500 font-bold text-2xl" id="installment-price">Rs. 42,646 / mo</p>
+                <p class="text-xs text-gray-600 mt-2">Zero markup plans available on select cards.*</p>
+            </div>
+
+            <a href="https://wa.me/923204589040" class="btn-glass px-12 py-5 text-xl">Confirm Order on WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- 7. Accordion (FAQ) -->
+    <section class="max-w-3xl mx-auto pb-24">
+        <h2 class="text-3xl font-bold mb-8 text-center">Common Queries</h2>
+        <div class="faq-item">
+            <div class="faq-question">Whats included in the box? <span>+</span></div>
+            <div class="faq-answer">Every iPhone 17 Pro from Elitephones comes with the USB-C Braided Charge Cable, Elitecare Warranty Card, and a complementary Glass Protector.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How does the PTA Approval work? <span>+</span></div>
+            <div class="faq-answer">Select the PTA Approved toggle to include government taxes in your price. We handle the entire registration process using our Elite-Express service.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Is delivery available in Lahore? <span>+</span></div>
+            <div class="faq-answer">Yes! We offer same-day hand-delivery within Lahore and insured nationwide shipping through TCS.</div>
+        </div>
+    </section>
+
+    <!-- 8. Packaging/Retail & Footer -->
+    <footer class="border-t border-zinc-800 pt-24 pb-12 bg-black">
+        <div class="max-w-7xl mx-auto px-6 grid-2">
+            <div>
+                <img src="https://images.unsplash.com/photo-1764746250417-695027581699" alt="Packaging" class="rounded-3xl mb-8 w-full h-[300px] object-cover opacity-80">
+                <h3 class="text-2xl font-bold">Elitephones Lahore</h3>
+                <p class="text-gray-500 mt-2">Shop #G-24, Hafiz Center, Lahore</p>
+            </div>
+            <div class="flex flex-col justify-end text-right">
+                <p class="text-sm text-gray-600 mb-4">&copy; 2024 Elitephones. iPhone is a trademark of Apple Inc.</p>
+                <div class="flex gap-4 justify-end">
+                    <a href="https://wa.me/923204589040" class="text-orange-500">WhatsApp Sales</a>
+                    <span class="text-gray-800">|</span>
+                    <a href="#" class="text-orange-500">Instagram</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Widget -->
-    <a href="https://wa.me/923204589040" class="wa-widget" title="Inquire on WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    <!-- WhatsApp Widget -->
+    <a href="https://wa.me/923204589040" class="wa-widget">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:white;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
     </a>
 
-    <!-- Scripts -->
-    <script src="js/calculator.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
