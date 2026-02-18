@@ -1,33 +1,48 @@
 /**
- * Elitephones - Liquid Glass Theme
- * Complete CSS for Premium Glassmorphism Design System
+ * Elitephones - Apple-Style Light Mode Theme
+ * Complete CSS for Premium Light Mode Glassmorphism Design System
  */
 
 /* ========================================
    CSS CUSTOM PROPERTIES (VARIABLES)
    ======================================== */
 :root {
-    /* Liquid Glass Colors */
-    --glass-bg: rgba(255, 255, 255, 0.15);
-    --glass-bg-prominent: rgba(255, 255, 255, 0.25);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-blur: blur(20px);
+    /* Apple-Style Light Mode Colors */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-bg-prominent: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --glass-blur: blur(25px);
     
-    /* Brand Colors */
-    --cosmic-orange: #FF8C00;
-    --cosmic-orange-light: #FFA533;
-    --cosmic-orange-dark: #E67A00;
-    --liquid-silver: #C0C0C0;
-    --liquid-silver-light: #E5E5E5;
+    /* Brand Colors - Retained */
+    --cosmic-orange: #FF4500;
+    --cosmic-orange-light: #FF6B35;
+    --cosmic-orange-dark: #E63E00;
+    --liquid-silver: #86868B;
+    --liquid-silver-light: #D2D2D7;
     
-    /* Neutral Palette */
-    --black-primary: #0A0A0A;
-    --black-secondary: #1A1A1A;
-    --grey-dark: #2A2A2A;
-    --grey-medium: #666666;
-    --grey-light: #A0A0A0;
+    /* Apple-Style Typography Palette */
+    --text-primary: #1D1D1F;
+    --text-secondary: #86868B;
+    --text-tertiary: #6E6E73;
+    
+    /* Apple-Style Background Palette */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F5F5F7;
+    --bg-tertiary: #FAFAFA;
+    
+    /* Apple-Style Border/Divider Colors */
+    --border-light: #D2D2D7;
+    --border-subtle: rgba(0, 0, 0, 0.1);
+    --border-card: 1px solid #D2D2D7;
+    
+    /* Legacy Neutral Palette - Updated for Light Mode */
+    --black-primary: #1D1D1F;
+    --black-secondary: #2D2D2F;
+    --grey-dark: #6E6E73;
+    --grey-medium: #86868B;
+    --grey-light: #86868B;
     --white-primary: #FFFFFF;
-    --white-secondary: #F5F5F5;
+    --white-secondary: #F5F5F7;
     
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -56,6 +71,12 @@
     --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Apple-Style Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08);
+    --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
 /* ========================================
@@ -75,8 +96,8 @@ html {
 
 body {
     font-family: var(--font-primary);
-    background-color: var(--black-primary);
-    color: var(--white-primary);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -102,7 +123,7 @@ button {
 }
 
 /* ========================================
-   NAVIGATION BAR - GLASS EFFECT
+   NAVIGATION BAR - LIGHT GLASS EFFECT
    ======================================== */
 .glass-nav {
     position: fixed;
@@ -110,10 +131,10 @@ button {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(10, 10, 10, 0.7);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1rem 2rem;
     transition: var(--transition-normal);
 }
@@ -145,7 +166,7 @@ button {
 .nav-link {
     font-size: 0.95rem;
     font-weight: var(--font-weight-medium);
-    color: var(--grey-light);
+    color: var(--text-secondary);
     position: relative;
 }
 
@@ -161,7 +182,7 @@ button {
 }
 
 .nav-link:hover {
-    color: var(--white-primary);
+    color: var(--text-primary);
 }
 
 .nav-link:hover::after {
@@ -175,16 +196,18 @@ button {
     border-radius: var(--radius-full);
     font-size: 0.9rem;
     font-weight: var(--font-weight-semibold);
-    color: var(--white-primary);
+    color: var(--text-primary);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: var(--transition-normal);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-glass-nav:hover {
-    background: rgba(255, 140, 0, 0.2);
+    background: rgba(255, 69, 0, 0.1);
     border-color: var(--cosmic-orange);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 @media (max-width: 768px) {
@@ -234,8 +257,8 @@ button {
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, 
-        rgba(10, 10, 10, 0.4) 0%, 
-        rgba(10, 10, 10, 0.7) 100%);
+        rgba(255, 255, 255, 0.3) 0%, 
+        rgba(255, 255, 255, 0.7) 100%);
 }
 
 .hero-content-wrapper {
@@ -268,7 +291,7 @@ button {
     line-height: 1.1;
     letter-spacing: -0.03em;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #FFFFFF 0%, #E0E0E0 100%);
+    background: linear-gradient(135deg, #1D1D1F 0%, #434344 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -277,7 +300,7 @@ button {
 .hero-subtitle {
     font-size: clamp(1rem, 3vw, 1.5rem);
     font-weight: var(--font-weight-regular);
-    color: var(--grey-light);
+    color: var(--text-secondary);
     margin-bottom: 3rem;
     line-height: 1.6;
 }
@@ -294,6 +317,7 @@ button {
     border-radius: var(--radius-full);
     padding: 0.8rem 2rem;
     margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
 }
 
 .pta-label {
@@ -301,7 +325,7 @@ button {
     font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--grey-light);
+    color: var(--text-secondary);
     transition: var(--transition-normal);
 }
 
@@ -328,7 +352,7 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--grey-dark);
+    background-color: #D2D2D7;
     border-radius: var(--radius-full);
     transition: var(--transition-normal);
 }
@@ -343,6 +367,7 @@ button {
     background-color: var(--white-primary);
     border-radius: 50%;
     transition: var(--transition-normal);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .toggle-switch input:checked + .toggle-slider {
@@ -360,7 +385,7 @@ button {
 
 .price-label {
     font-size: 0.9rem;
-    color: var(--grey-light);
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 0.5rem;
@@ -381,13 +406,13 @@ button {
     font-size: 1.1rem;
     font-weight: var(--font-weight-semibold);
     border-radius: var(--radius-full);
-    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 69, 0, 0.3);
     transition: var(--transition-normal);
 }
 
 .btn-primary-hero:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(255, 140, 0, 0.4);
+    box-shadow: 0 15px 40px rgba(255, 69, 0, 0.4);
 }
 
 /* Scroll Indicator */
@@ -404,7 +429,7 @@ button {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: var(--grey-light);
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
     display: block;
 }
@@ -413,7 +438,7 @@ button {
     width: 24px;
     height: 36px;
     margin: 0 auto;
-    border: 2px solid var(--grey-light);
+    border: 2px solid var(--text-secondary);
     border-radius: var(--radius-md);
     position: relative;
 }
@@ -464,11 +489,12 @@ button {
     letter-spacing: -0.02em;
     text-align: center;
     margin-bottom: 1rem;
+    color: var(--text-primary);
 }
 
 .section-subtitle {
     font-size: clamp(1rem, 2vw, 1.3rem);
-    color: var(--grey-light);
+    color: var(--text-secondary);
     text-align: center;
     margin-bottom: 3rem;
 }
@@ -490,28 +516,31 @@ button {
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-lg);
     transition: var(--transition-normal);
+    box-shadow: var(--shadow-md);
 }
 
 .glass-card:hover {
     background: var(--glass-bg-prominent);
-    border-color: rgba(255, 140, 0, 0.3);
+    border-color: rgba(255, 69, 0, 0.2);
     transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .glass-card-prominent {
-    background: var(--glass-bg-prominent);
+    background: var(--bg-primary);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
+    border: var(--border-card);
     border-radius: var(--radius-xl);
     padding: 3rem;
+    box-shadow: var(--shadow-md);
 }
 
 /* ========================================
    FEATURES SECTION
    ======================================== */
 .features-section {
-    background: linear-gradient(180deg, var(--black-primary) 0%, var(--black-secondary) 100%);
+    background: var(--bg-secondary);
 }
 
 .features-grid {
@@ -524,6 +553,7 @@ button {
 .feature-card {
     padding: 0;
     overflow: hidden;
+    background: var(--bg-primary);
 }
 
 .feature-image-wrapper {
@@ -551,11 +581,12 @@ button {
     font-size: 1.8rem;
     font-weight: var(--font-weight-bold);
     margin-bottom: 1rem;
+    color: var(--text-primary);
 }
 
 .feature-description {
     font-size: 1rem;
-    color: var(--grey-light);
+    color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
@@ -569,7 +600,7 @@ button {
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
-    color: var(--grey-light);
+    color: var(--text-secondary);
     font-size: 0.95rem;
 }
 
@@ -585,7 +616,7 @@ button {
    SPECS SECTION
    ======================================== */
 .specs-section {
-    background: var(--black-secondary);
+    background: var(--bg-primary);
 }
 
 .specs-grid {
@@ -599,6 +630,7 @@ button {
     padding: 0;
     overflow: hidden;
     text-align: center;
+    background: var(--bg-secondary);
 }
 
 .spec-image-wrapper {
@@ -626,11 +658,12 @@ button {
     font-size: 1.5rem;
     font-weight: var(--font-weight-bold);
     margin-bottom: 0.5rem;
+    color: var(--text-primary);
 }
 
 .spec-description {
     font-size: 0.95rem;
-    color: var(--grey-light);
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 
@@ -638,7 +671,7 @@ button {
    COLOR SELECTOR SECTION
    ======================================== */
 .colors-section {
-    background: linear-gradient(180deg, var(--black-secondary) 0%, var(--black-primary) 100%);
+    background: var(--bg-secondary);
 }
 
 .color-swatches {
@@ -654,28 +687,31 @@ button {
     align-items: center;
     gap: 0.8rem;
     padding: 1.5rem 2rem;
-    background: var(--glass-bg);
+    background: var(--bg-primary);
     border: 2px solid transparent;
     border-radius: var(--radius-md);
     transition: var(--transition-normal);
     cursor: pointer;
+    box-shadow: var(--shadow-sm);
 }
 
 .color-swatch:hover {
-    background: var(--glass-bg-prominent);
+    background: var(--bg-primary);
     transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
 }
 
 .color-swatch.active {
     border-color: var(--cosmic-orange);
-    background: var(--glass-bg-prominent);
+    background: var(--bg-primary);
+    box-shadow: var(--shadow-md);
 }
 
 .swatch-circle {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(0, 0, 0, 0.1);
     transition: var(--transition-normal);
 }
 
@@ -684,28 +720,29 @@ button {
 }
 
 .silver-swatch {
-    background: linear-gradient(135deg, var(--liquid-silver), var(--liquid-silver-light));
+    background: linear-gradient(135deg, #C0C0C0, #E5E5E5);
 }
 
 .color-swatch.active .swatch-circle {
     border-color: var(--cosmic-orange);
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.3);
 }
 
 .swatch-label {
     font-size: 0.9rem;
     font-weight: var(--font-weight-semibold);
-    color: var(--grey-light);
+    color: var(--text-secondary);
     transition: var(--transition-normal);
 }
 
 .color-swatch.active .swatch-label {
-    color: var(--white-primary);
+    color: var(--text-primary);
 }
 
 .product-showcase {
     padding: 2rem;
     margin: 2rem 0;
+    background: var(--bg-primary);
 }
 
 .product-display-image {
@@ -731,7 +768,7 @@ button {
 
 .color-detail-text {
     font-size: 1.1rem;
-    color: var(--grey-light);
+    color: var(--text-secondary);
     line-height: 1.8;
     max-width: 700px;
     margin: 0 auto;
@@ -741,7 +778,7 @@ button {
    PRICING SECTION
    ======================================== */
 .pricing-section {
-    background: var(--black-primary);
+    background: var(--bg-primary);
 }
 
 .pricing-card {
@@ -762,7 +799,7 @@ button {
 
 .price-caption {
     font-size: 1rem;
-    color: var(--grey-light);
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
@@ -771,7 +808,7 @@ button {
 .installment-section {
     margin: 3rem 0;
     padding: 2rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--border-light);
 }
 
 .toggle-section-title {
@@ -779,7 +816,7 @@ button {
     font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--grey-light);
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
 }
 
@@ -787,16 +824,16 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 1.2rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--bg-secondary);
     padding: 1rem 2rem;
     border-radius: var(--radius-full);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-light);
 }
 
 .pta-label-main {
     font-size: 0.9rem;
     font-weight: var(--font-weight-semibold);
-    color: var(--grey-light);
+    color: var(--text-secondary);
     transition: var(--transition-normal);
 }
 
@@ -823,7 +860,7 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--grey-dark);
+    background-color: #D2D2D7;
     border-radius: var(--radius-full);
     transition: var(--transition-normal);
 }
@@ -838,6 +875,7 @@ button {
     background-color: var(--white-primary);
     border-radius: 50%;
     transition: var(--transition-normal);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .toggle-switch-main input:checked + .toggle-slider-main {
@@ -851,7 +889,7 @@ button {
 .pta-info-text {
     margin-top: 1rem;
     font-size: 0.85rem;
-    color: var(--grey-light);
+    color: var(--text-secondary);
     line-height: 1.5;
 }
 
@@ -868,7 +906,7 @@ button {
     flex-direction: column;
     align-items: center;
     padding: 1.5rem 2.5rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--bg-secondary);
     border: 2px solid transparent;
     border-radius: var(--radius-md);
     transition: var(--transition-normal);
@@ -876,26 +914,27 @@ button {
 }
 
 .installment-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--bg-tertiary);
     transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
 }
 
 .installment-btn.active {
     border-color: var(--cosmic-orange);
-    background: rgba(255, 140, 0, 0.1);
+    background: rgba(255, 69, 0, 0.05);
 }
 
 .installment-duration {
     font-size: 2.5rem;
     font-weight: var(--font-weight-bold);
-    color: var(--white-primary);
+    color: var(--text-primary);
 }
 
 .installment-label {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--grey-light);
+    color: var(--text-secondary);
 }
 
 .monthly-price-display {
@@ -911,7 +950,7 @@ button {
 
 .installment-note {
     font-size: 0.8rem;
-    color: var(--grey-medium);
+    color: var(--text-tertiary);
 }
 
 .btn-primary-large {
@@ -923,26 +962,26 @@ button {
     font-size: 1.2rem;
     font-weight: var(--font-weight-semibold);
     border-radius: var(--radius-full);
-    box-shadow: 0 15px 40px rgba(255, 140, 0, 0.3);
+    box-shadow: 0 15px 40px rgba(255, 69, 0, 0.3);
     transition: var(--transition-normal);
 }
 
 .btn-primary-large:hover {
     transform: translateY(-3px);
-    box-shadow: 0 20px 50px rgba(255, 140, 0, 0.4);
+    box-shadow: 0 20px 50px rgba(255, 69, 0, 0.4);
 }
 
 .secure-checkout-text {
     margin-top: 1rem;
     font-size: 0.85rem;
-    color: var(--grey-medium);
+    color: var(--text-tertiary);
 }
 
 /* ========================================
    FAQ ACCORDION
    ======================================== */
 .faq-section {
-    background: linear-gradient(180deg, var(--black-primary) 0%, var(--black-secondary) 100%);
+    background: var(--bg-secondary);
 }
 
 .faq-accordion {
@@ -951,21 +990,32 @@ button {
 }
 
 .faq-item {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--border-light);
+    background: var(--bg-primary);
+    transition: background-color var(--transition-normal);
+}
+
+.faq-item:hover {
+    background: var(--bg-tertiary);
+}
+
+.faq-item.active {
+    background: var(--bg-secondary);
 }
 
 .faq-question {
     width: 100%;
-    padding: 1.8rem 0;
+    padding: 1.8rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
     font-weight: var(--font-weight-semibold);
-    color: var(--white-primary);
+    color: var(--text-primary);
     text-align: left;
     cursor: pointer;
     transition: var(--transition-normal);
+    background: transparent;
 }
 
 .faq-question:hover {
@@ -975,10 +1025,12 @@ button {
 .faq-icon {
     flex-shrink: 0;
     transition: transform var(--transition-normal);
+    color: var(--text-secondary);
 }
 
 .faq-item.active .faq-icon {
     transform: rotate(45deg);
+    color: var(--cosmic-orange);
 }
 
 .faq-answer {
@@ -992,8 +1044,8 @@ button {
 }
 
 .faq-answer p {
-    padding-bottom: 1.5rem;
-    color: var(--grey-light);
+    padding: 0 1.5rem 1.5rem;
+    color: var(--text-secondary);
     line-height: 1.8;
 }
 
@@ -1001,8 +1053,8 @@ button {
    FOOTER
    ======================================== */
 .footer-section {
-    background: var(--black-secondary);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-light);
 }
 
 .footer-retail {
@@ -1014,6 +1066,7 @@ button {
     max-height: 400px;
     overflow: hidden;
     border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
 }
 
 .retail-image {
@@ -1040,13 +1093,13 @@ button {
 }
 
 .footer-tagline {
-    color: var(--grey-light);
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
 }
 
 .footer-address {
     font-style: normal;
-    color: var(--grey-light);
+    color: var(--text-secondary);
     line-height: 1.8;
 }
 
@@ -1056,6 +1109,7 @@ button {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 1rem;
+    color: var(--text-primary);
 }
 
 .footer-links {
@@ -1067,7 +1121,7 @@ button {
 }
 
 .footer-links a {
-    color: var(--grey-light);
+    color: var(--text-secondary);
     transition: var(--transition-normal);
 }
 
@@ -1076,25 +1130,25 @@ button {
 }
 
 .footer-text {
-    color: var(--grey-light);
+    color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 0.8rem;
 }
 
 .footer-bottom {
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--border-light);
     text-align: center;
 }
 
 .footer-copyright {
-    color: var(--grey-light);
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
 }
 
 .footer-disclaimer {
     font-size: 0.85rem;
-    color: var(--grey-medium);
+    color: var(--text-tertiary);
 }
 
 /* ========================================
