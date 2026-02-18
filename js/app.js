@@ -1,5 +1,5 @@
 /**
- * app.js - State Management for Elitephones Liquid Glass Theme
+ * app.js - State Management for Elitephones Apple-Style Light Mode Theme
  * Handles dynamic pricing, PTA tax toggling, color selection, and installment calculations
  */
 
@@ -100,7 +100,7 @@ function updatePTALabels(labels) {
             label.style.color = 'var(--cosmic-orange)';
             label.style.fontWeight = 'var(--font-weight-bold)';
         } else {
-            label.style.color = 'var(--grey-light)';
+            label.style.color = 'var(--text-secondary)';
             label.style.fontWeight = 'var(--font-weight-semibold)';
         }
     });
@@ -300,6 +300,7 @@ function initializeEventListeners() {
 
 /**
  * Initialize navigation blur effect on scroll
+ * Apple-style light mode navigation enhancement
  */
 function initializeNavEffects() {
     const nav = document.querySelector('.glass-nav');
@@ -311,11 +312,15 @@ function initializeNavEffects() {
         const currentScroll = window.pageYOffset;
         
         if (currentScroll > 100) {
-            nav.style.background = 'rgba(10, 10, 10, 0.85)';
-            nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
+            // Apple-style scrolled navigation - more opaque white
+            nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+            nav.style.borderBottom = '1px solid rgba(0, 0, 0, 0.08)';
         } else {
-            nav.style.background = 'rgba(10, 10, 10, 0.7)';
+            // Default glass effect
+            nav.style.background = 'rgba(255, 255, 255, 0.8)';
             nav.style.boxShadow = 'none';
+            nav.style.borderBottom = '1px solid rgba(0, 0, 0, 0.1)';
         }
         
         lastScroll = currentScroll;
@@ -363,8 +368,8 @@ function init() {
     initializeScrollAnimations();
     
     // Log initialization
-    console.log('%c✓ Elitephones Liquid Glass Theme Initialized', 'color: #FF8C00; font-weight: bold; font-size: 14px;');
-    console.log(`%cCurrent State:`, 'color: #C0C0C0; font-weight: bold;');
+    console.log('%c✓ Elitephones Apple-Style Light Mode Theme Initialized', 'color: #FF4500; font-weight: bold; font-size: 14px;');
+    console.log(`%cCurrent State:`, 'color: #86868B; font-weight: bold;');
     console.log(`  Color: ${STATE.color}`);
     console.log(`  PTA: ${STATE.pta}`);
     console.log(`  Term: ${STATE.term} months`);
