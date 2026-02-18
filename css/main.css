@@ -10,6 +10,7 @@
     /* Apple-Style Light Mode Colors */
     --glass-bg: rgba(255, 255, 255, 0.7);
     --glass-bg-prominent: rgba(255, 255, 255, 0.85);
+    --glass-bg-scrolled: rgba(255, 255, 255, 0.95);
     --glass-border: rgba(0, 0, 0, 0.08);
     --glass-blur: blur(25px);
     
@@ -77,6 +78,7 @@
     --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.04);
     --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08);
     --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.12);
+    --shadow-nav-scrolled: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* ========================================
